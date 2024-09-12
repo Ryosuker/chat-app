@@ -10,11 +10,11 @@ class UsersController < ApplicationController
       render :edit, status: :unprocessable_entity
     end
   end
-  
+
   private
   def user_params
     # permitメソッドを使用し、「name」と「email」の編集を許可します。
     params.require(:user).permit(:name, :email)
   end
 
-  end
+end
